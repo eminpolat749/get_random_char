@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+int get_random_char(void)
+{
+	int c;
+	while (!isupper(c = rand() % 128))
+		;
+
+	return c;
+}
+int main(void)
+{
+	for (;;) {
+		putchar(get_random_char());
+		_getch();
+	}	
+
+}
